@@ -32,6 +32,10 @@ app.get('/about', (req, res, next) => {
   });
 });
 
+app.get('/projects', (req, res, next) => {
+  res.render('projects.hbs');
+});
+
 app.listen(port, () => {
   console.log(`The app is up on port ${port}.`);
 });
