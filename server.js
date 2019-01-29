@@ -5,6 +5,9 @@ const hbs = require('hbs');
 // Starting new express app
 const app = express();
 
+// Making dynamic port
+const port = process.env.PORT || 3000;
+
 // Set up express view engine
 app.set('view engine', 'hbs');
 
@@ -28,7 +31,6 @@ app.get('/about', (req, res, next) => {
     // currentYear: new Date().getFullYear()
   });
 });
-let port = process.env.PORT || 3000;
 
 app.listen(port, () => {
   console.log(`The app is up on port ${port}.`);
