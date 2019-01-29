@@ -28,8 +28,8 @@ app.get('/about', (req, res, next) => {
     // currentYear: new Date().getFullYear()
   });
 });
+let port = process.env.PORT || 3000;
 
-
-app.listen(3000, () => {
-  console.log('The app is up on port 3000');
+app.listen(port, () => {
+  console.log(`The app is up on port ${port}.`);
 });
