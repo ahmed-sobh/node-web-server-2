@@ -1,18 +1,18 @@
 // Loading express
 const express = require('express');
-const handlebars = require('hbs');
+const hbs = require('hbs');
 
 // Starting new express app
 const app = express();
 
 // Set up express view engine
-app.set('view engine', 'handlebars');
+app.set('view engine', 'hbs');
 
-handlebars.registerHelper('getCurrentYear', () => {
+hbs.registerHelper('getCurrentYear', () => {
   return new Date().getFullYear();
 });
 
-handlebars.registerPartials(`${__dirname}/views/partials`);
+hbs.registerPartials(`${__dirname}/views/partials`);
 
 app.get('/', (req, res, next) => {
   // res.send('<h1>Welcome to our page.<h1>');
